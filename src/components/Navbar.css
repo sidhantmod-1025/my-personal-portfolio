@@ -1,0 +1,233 @@
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 24px 7%;
+
+  position: relative;
+  z-index: 100;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  background: rgba(7, 9, 13, 0.65);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.navbar-logo {
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 700;
+
+  text-decoration: none;
+  letter-spacing: -1px;
+
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.06);
+}
+
+.navbar-logo span {
+  color: #38e8ff;
+}
+
+/* =========================
+   NAVIGATION LINKS
+========================= */
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.navbar-links a {
+  position: relative;
+
+  color: #a5a9b8;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* Animated underline */
+
+.navbar-links a::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+
+  width: 0;
+  height: 2px;
+
+  background: linear-gradient(
+    90deg,
+    #38e8ff,
+    #8b5cf6
+  );
+
+  border-radius: 10px;
+
+  transition: width 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #38e8ff;
+  transform: translateY(-2px);
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}
+
+/* =========================
+   LET'S TALK BUTTON
+========================= */
+
+.navbar-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 12px 18px;
+
+  border: 1px solid rgba(56, 232, 255, 0.5);
+  border-radius: 8px;
+
+  color: #38e8ff;
+  background: rgba(56, 232, 255, 0.04);
+
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.navbar-button span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.navbar-button:hover {
+  background: #38e8ff;
+  color: #07090d;
+
+  border-color: #38e8ff;
+
+  box-shadow: 0 0 22px rgba(56, 232, 255, 0.25);
+
+  transform: translateY(-2px);
+}
+
+.navbar-button:hover span {
+  transform: translate(3px, -3px);
+}
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 20px 5%;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .navbar-links {
+    order: 3;
+    width: 100%;
+
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .navbar-button {
+    padding: 10px 14px;
+  }
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 18px 5%;
+    gap: 16px;
+  }
+
+  .navbar-logo {
+    font-size: 25px;
+  }
+
+  .navbar-links {
+    gap: 18px;
+  }
+
+  .navbar-links a {
+    font-size: 12px;
+  }
+
+  .navbar-button {
+    padding: 9px 11px;
+    font-size: 12px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 360px) {
+  .navbar {
+    gap: 14px;
+  }
+
+  .navbar-links {
+    gap: 14px;
+  }
+
+  .navbar-links a {
+    font-size: 11px;
+  }
+}
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar-logo,
+  .navbar-links a,
+  .navbar-links a::after,
+  .navbar-button,
+  .navbar-button span {
+    transition: none;
+  }
+}

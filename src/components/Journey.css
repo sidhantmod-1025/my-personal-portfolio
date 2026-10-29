@@ -1,0 +1,471 @@
+/* =========================
+   JOURNEY SECTION
+========================= */
+
+.journey-section {
+  padding: 110px 7%;
+  background: #07090d;
+  color: #f5f7fa;
+  overflow: hidden;
+}
+
+.journey-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* =========================
+   SECTION LABEL
+========================= */
+
+.journey-label {
+  color: #a5a9b8;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 35px;
+}
+
+.journey-label span {
+  color: #38e8ff;
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.journey-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 35px;
+  margin-bottom: 65px;
+}
+
+.journey-heading h2 {
+  margin: 0;
+  font-size: clamp(36px, 5vw, 58px);
+  line-height: 1.12;
+  letter-spacing: -2px;
+}
+
+.journey-heading h2 span {
+  display: inline-block;
+
+  background: linear-gradient(
+    90deg,
+    #38e8ff,
+    #8b5cf6
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.journey-heading > p {
+  max-width: 390px;
+  color: #a5a9b8;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* =========================
+   TIMELINE
+========================= */
+
+.journey-timeline {
+  position: relative;
+}
+
+/* Animated vertical line */
+
+.journey-timeline-line {
+  position: absolute;
+
+  top: 30px;
+  bottom: 35px;
+  left: 27px;
+
+  width: 1px;
+
+  background: linear-gradient(
+    to bottom,
+    #38e8ff,
+    rgba(139, 92, 246, 0.45),
+    rgba(255, 255, 255, 0.08)
+  );
+
+  transform-origin: top;
+  pointer-events: none;
+}
+
+/* =========================
+   TIMELINE ITEM
+========================= */
+
+.journey-item {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr);
+  gap: 25px;
+
+  margin-bottom: 30px;
+}
+
+/* =========================
+   TIMELINE MARKER
+========================= */
+
+.journey-marker {
+  position: relative;
+  z-index: 1;
+
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid rgba(56, 232, 255, 0.35);
+  border-radius: 50%;
+
+  background: #0a0d13;
+  color: #38e8ff;
+  font-size: 12px;
+
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.journey-item:hover .journey-marker {
+  border-color: #38e8ff;
+  background: rgba(56, 232, 255, 0.1);
+  box-shadow: 0 0 22px rgba(56, 232, 255, 0.15);
+}
+
+.journey-item-current .journey-marker {
+  background: rgba(56, 232, 255, 0.12);
+  box-shadow: 0 0 25px rgba(56, 232, 255, 0.12);
+}
+
+/* =========================
+   JOURNEY CARD
+========================= */
+
+.journey-card {
+  position: relative;
+  overflow: hidden;
+
+  padding: 28px 32px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.045),
+    rgba(255, 255, 255, 0.015)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 14px;
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* Subtle card glow */
+
+.journey-card::before {
+  content: "";
+
+  position: absolute;
+  top: -80px;
+  right: -80px;
+
+  width: 170px;
+  height: 170px;
+
+  background: rgba(56, 232, 255, 0.07);
+  filter: blur(55px);
+  border-radius: 50%;
+
+  opacity: 0;
+  transition: opacity 0.35s ease;
+
+  pointer-events: none;
+}
+
+.journey-card:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(56, 232, 255, 0.35);
+
+  background: linear-gradient(
+    135deg,
+    rgba(56, 232, 255, 0.045),
+    rgba(139, 92, 246, 0.025)
+  );
+
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+}
+
+.journey-card:hover::before {
+  opacity: 1;
+}
+
+/* =========================
+   CARD TOP
+========================= */
+
+.journey-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+
+  margin-bottom: 18px;
+}
+
+.journey-year {
+  color: #38e8ff;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+}
+
+.journey-current-badge {
+  color: #38e8ff;
+  font-size: 9px;
+  letter-spacing: 1px;
+
+  padding: 6px 9px;
+
+  border: 1px solid rgba(56, 232, 255, 0.3);
+  border-radius: 5px;
+
+  background: rgba(56, 232, 255, 0.045);
+}
+
+/* =========================
+   CARD TEXT
+========================= */
+
+.journey-card h3 {
+  margin: 0 0 8px;
+  font-size: 22px;
+  line-height: 1.5;
+
+  transition: color 0.3s ease;
+}
+
+.journey-card:hover h3 {
+  color: #38e8ff;
+}
+
+.journey-card h4 {
+  margin: 0 0 15px;
+
+  color: #a5a9b8;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.journey-card > p {
+  position: relative;
+
+  max-width: 700px;
+
+  color: #a5a9b8;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* =========================
+   JOURNEY TAGS
+========================= */
+
+.journey-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.journey-tags span {
+  display: inline-block;
+
+  padding: 7px 10px;
+
+  color: #d5d8e2;
+
+  background: rgba(139, 92, 246, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 5px;
+
+  font-size: 11px;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.journey-tags span:hover {
+  color: #38e8ff;
+
+  background: rgba(56, 232, 255, 0.07);
+  border-color: rgba(56, 232, 255, 0.3);
+
+  transform: translateY(-2px);
+}
+
+/* =========================
+   FOOTER MESSAGE
+========================= */
+
+.journey-footer {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  margin-top: 55px;
+  padding: 25px;
+
+  border: 1px solid rgba(56, 232, 255, 0.18);
+  border-radius: 12px;
+
+  background: rgba(56, 232, 255, 0.035);
+}
+
+.journey-footer-symbol {
+  flex-shrink: 0;
+
+  color: #38e8ff;
+  font-size: 30px;
+
+  display: inline-block;
+  will-change: transform;
+}
+
+.journey-footer p {
+  margin: 0;
+
+  color: #c2c6d3;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* =========================
+   TABLET & MOBILE
+========================= */
+
+@media (max-width: 700px) {
+  .journey-section {
+    padding: 75px 5%;
+  }
+
+  .journey-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 45px;
+  }
+
+  .journey-heading h2 {
+    font-size: clamp(34px, 8vw, 46px);
+    letter-spacing: -1.3px;
+  }
+
+  .journey-item {
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .journey-timeline-line {
+    left: 20px;
+  }
+
+  .journey-marker {
+    width: 41px;
+    height: 41px;
+    font-size: 10px;
+  }
+
+  .journey-card {
+    padding: 22px 18px;
+  }
+
+  .journey-card h3 {
+    font-size: 19px;
+  }
+
+  .journey-card-top {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .journey-footer {
+    padding: 18px;
+    gap: 13px;
+  }
+
+  .journey-footer p {
+    font-size: 13px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 380px) {
+  .journey-item {
+    grid-template-columns: 36px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .journey-timeline-line {
+    left: 17px;
+  }
+
+  .journey-marker {
+    width: 35px;
+    height: 35px;
+    font-size: 9px;
+  }
+
+  .journey-card {
+    padding: 18px 14px;
+  }
+
+  .journey-card h3 {
+    font-size: 17px;
+  }
+
+  .journey-year {
+    font-size: 10px;
+  }
+
+  .journey-footer-symbol {
+    font-size: 24px;
+  }
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .journey-card,
+  .journey-card::before,
+  .journey-card h3,
+  .journey-marker,
+  .journey-tags span {
+    transition: none;
+  }
+}

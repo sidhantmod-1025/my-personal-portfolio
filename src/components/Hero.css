@@ -1,0 +1,546 @@
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero {
+  min-height: 88vh;
+  padding: 80px 7%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  isolation: isolate;
+  perspective: 1200px;
+}
+
+.hero-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 50px;
+}
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 15px;
+  border: 1px solid rgba(56, 232, 255, 0.25);
+  border-radius: 50px;
+  background: rgba(56, 232, 255, 0.05);
+  color: #b9c4d8;
+  font-size: 11px;
+  letter-spacing: 1.2px;
+  margin-bottom: 30px;
+}
+
+.hero-status-dot {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #38e8ff;
+  box-shadow: 0 0 12px #38e8ff;
+  animation: heroPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes heroPulse {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 12px #38e8ff;
+  }
+
+  50% {
+    opacity: 0.5;
+    box-shadow: 0 0 22px #38e8ff;
+  }
+}
+
+.hero-content h1 {
+  color: #f5f7fa;
+  font-size: clamp(42px, 5.5vw, 76px);
+  line-height: 1.08;
+  letter-spacing: -3px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.hero-content h1 span {
+  color: #38e8ff;
+  background: linear-gradient(
+    90deg,
+    #38e8ff,
+    #8b5cf6,
+    #38e8ff
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: heroGradient 5s linear infinite;
+}
+
+@keyframes heroGradient {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.hero-description {
+  max-width: 520px;
+  color: #a5a9b8;
+  font-size: 16px;
+  line-height: 1.9;
+  margin-bottom: 32px;
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.hero-primary-btn,
+.hero-secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 15px 21px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-decoration: none;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.hero-primary-btn {
+  background: #38e8ff;
+  color: #07090d;
+  font-weight: 600;
+}
+
+.hero-primary-btn span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.hero-primary-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(56, 232, 255, 0.2);
+}
+
+.hero-primary-btn:hover span {
+  transform: translate(3px, -3px);
+}
+
+.hero-secondary-btn {
+  color: #f5f7fa;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.hero-secondary-btn:hover {
+  transform: translateY(-3px);
+  border-color: #38e8ff;
+  color: #38e8ff;
+}
+
+/* Keyboard accessibility */
+
+.hero-primary-btn:focus-visible,
+.hero-secondary-btn:focus-visible {
+  outline: 2px solid #38e8ff;
+  outline-offset: 4px;
+}
+
+/* =========================================
+   BOTTOM META
+========================================= */
+
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 55px;
+  color: #737b8e;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  line-height: 1.8;
+}
+
+/* =========================================
+   RIGHT VISUAL
+========================================= */
+
+.hero-visual {
+  min-height: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+
+/* =========================================
+   GLOW EFFECT
+========================================= */
+
+.hero-glow {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  background: rgba(56, 232, 255, 0.12);
+  filter: blur(100px);
+  border-radius: 50%;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+/* =========================================
+   ROTATING ORBITS
+========================================= */
+
+.hero-orbit {
+  position: absolute;
+  border: 1px solid rgba(56, 232, 255, 0.15);
+  border-radius: 50%;
+  pointer-events: none;
+  transform-style: preserve-3d;
+}
+
+.hero-orbit-one {
+  width: 420px;
+  height: 250px;
+  transform: rotate(-25deg);
+}
+
+.hero-orbit-two {
+  width: 350px;
+  height: 450px;
+  transform: rotate(25deg);
+  border-color: rgba(139, 92, 246, 0.2);
+}
+
+/* =========================================
+   GLASSMORPHISM CARD
+========================================= */
+
+.hero-card {
+  width: min(100%, 350px);
+  min-height: 320px;
+  padding: 25px;
+  position: relative;
+  z-index: 1;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(25, 34, 55, 0.95),
+    rgba(9, 13, 24, 0.96)
+  );
+
+  box-shadow:
+    0 25px 80px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: border-color 0.3s ease;
+}
+
+.hero-card:hover {
+  border-color: rgba(56, 232, 255, 0.45);
+}
+
+.hero-card-top,
+.hero-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  color: #858da2;
+  font-size: 10px;
+  letter-spacing: 1px;
+  line-height: 1.8;
+}
+
+.hero-card-indicator {
+  color: #38e8ff;
+  white-space: nowrap;
+}
+
+.hero-code-symbol {
+  margin: 30px 0 15px;
+  font-size: 76px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #38e8ff;
+
+  text-shadow:
+    0 0 20px rgba(56, 232, 255, 0.3),
+    0 0 50px rgba(139, 92, 246, 0.15);
+}
+
+.hero-card h2 {
+  color: #f5f7fa;
+  font-size: 23px;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.hero-card p {
+  color: #9ca5b8;
+  font-size: 13px;
+  line-height: 2;
+  margin-bottom: 25px;
+}
+
+.hero-card-bottom {
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero-card-bottom span:last-child {
+  color: #38e8ff;
+  font-size: 18px;
+}
+
+/* =========================================
+   FLOATING TECHNOLOGY TAGS
+========================================= */
+
+.hero-floating-tag {
+  position: absolute;
+  z-index: 2;
+  padding: 12px 17px;
+  background: rgba(17, 24, 39, 0.95);
+  border: 1px solid rgba(56, 232, 255, 0.25);
+  border-radius: 9px;
+  color: #f5f7fa;
+  font-size: 12px;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.hero-tag-one {
+  top: 55px;
+  right: 0;
+}
+
+.hero-tag-two {
+  bottom: 45px;
+  left: 0;
+  border-color: rgba(139, 92, 246, 0.35);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .hero-floating-tag:hover {
+    border-color: #38e8ff;
+    box-shadow: 0 0 25px rgba(56, 232, 255, 0.15);
+  }
+}
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: auto;
+    padding: 65px 6%;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(42px, 9vw, 68px);
+  }
+
+  .hero-visual {
+    min-height: 420px;
+    perspective: none;
+  }
+
+  .hero-orbit-one {
+    width: min(420px, 90%);
+  }
+
+  .hero-orbit-two {
+    width: min(350px, 78%);
+  }
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 50px 5%;
+  }
+
+  .hero-badge {
+    gap: 8px;
+    padding: 10px 12px;
+    font-size: 9px;
+    letter-spacing: 0.5px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(38px, 10vw, 48px);
+    letter-spacing: -1.5px;
+    line-height: 1.12;
+  }
+
+  .hero-description {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .hero-primary-btn,
+  .hero-secondary-btn {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .hero-meta {
+    gap: 12px;
+    margin-top: 35px;
+    font-size: 9px;
+  }
+
+  .hero-visual {
+    min-height: 370px;
+  }
+
+  .hero-card {
+    width: min(100%, 330px);
+    min-height: 300px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .hero-code-symbol {
+    font-size: 65px;
+    margin-top: 24px;
+  }
+
+  .hero-card h2 {
+    font-size: 21px;
+  }
+
+  .hero-orbit-one {
+    width: 300px;
+    max-width: 95%;
+    height: 200px;
+  }
+
+  .hero-orbit-two {
+    width: 270px;
+    max-width: 85%;
+    height: 350px;
+  }
+
+  .hero-tag-one {
+    top: 20px;
+    right: 0;
+  }
+
+  .hero-tag-two {
+    bottom: 15px;
+    left: 0;
+  }
+
+  .hero-floating-tag {
+    padding: 10px 13px;
+    font-size: 11px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE SCREENS
+========================================= */
+
+@media (max-width: 360px) {
+  .hero-badge {
+    font-size: 8px;
+    letter-spacing: 0;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-visual {
+    min-height: 340px;
+  }
+
+  .hero-card {
+    padding: 16px;
+  }
+
+  .hero-card-top,
+  .hero-card-bottom {
+    font-size: 9px;
+  }
+
+  .hero-card h2 {
+    font-size: 19px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-content h1 span,
+  .hero-status-dot {
+    animation: none;
+  }
+
+  .hero-card,
+  .hero-floating-tag,
+  .hero-primary-btn,
+  .hero-secondary-btn {
+    transition: none;
+  }
+}
