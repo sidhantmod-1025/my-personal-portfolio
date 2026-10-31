@@ -58,7 +58,7 @@ function Contact() {
 
         // Form fields
         .from(
-          ".contact-form label, .contact-form input, .contact-form textarea, .contact-submit-button",
+          ".contact-form label, .contact-form input, .contact-form textarea",
           {
             y: 18,
             opacity: 0,

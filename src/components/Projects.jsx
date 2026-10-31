@@ -68,13 +68,15 @@ const projects = [
     link: "https://sidhantmod-1025.github.io/clone-for-first/",
   },
   {
-    number: "07",
-    category: "Programming Language C",
-    title: "C language",
-    description:
-      "All C programming question and practice",
-    link: "https://github.com/sidhantmod-1025/c-programming",
-  },
+  number: "07",
+  category: "PROGRAMMING LANGUAGE · C",
+  title: "C Programming",
+  description:
+    "A collection of C programming questions, coding exercises, and practical problems to strengthen programming fundamentals.",
+  technologies: ["C", "Programming", "Problem Solving"],
+  status: "CODING PROJECT",
+  link: "https://github.com/sidhantmod-1025/c-programming",
+},
 
 ];
 

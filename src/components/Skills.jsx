@@ -82,19 +82,18 @@ function Skills() {
       });
 
       // Skill cards appear one by one
-      gsap.from(".skill-card", {
-        scrollTrigger: {
-          trigger: ".skills-grid",
-          start: "top 85%",
-          once: true,
-        },
-        y: 55,
-        opacity: 0,
-        scale: 0.94,
-        duration: 0.8,
-        stagger: 0.16,
-        ease: "power3.out",
-      });
+     gsap.from(".skill-card", {
+  scrollTrigger: {
+    trigger: ".skills-grid",
+    start: "top 85%",
+    once: true,
+  },
+  y: 30,
+  opacity: 0,
+  duration: 0.7,
+  stagger: 0.15,
+  ease: "power3.out",
+});
 
       // Skill tags animation
       gsap.from(".skill-tag", {
@@ -215,7 +214,8 @@ function Skills() {
               </article>
             ))}
           </div>
-
+               <br></br>
+               <br></br>
           <div className="skills-note">
             <span className="skills-note-dot"></span>
 

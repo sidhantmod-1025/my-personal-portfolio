@@ -175,7 +175,9 @@ function About() {
               </div>
             </div>
           </div>
-
+             <br>
+             </br>
+             <br></br>
           {/* Education Card */}
           <div className="about-education">
             <div className="education-icon">🎓</div>
