@@ -14,7 +14,7 @@ const projects = [
       "An AI-powered study assistant that answers questions and helps students create topic notes using the Groq API.",
     technologies: ["Python", "Groq API", "LLM", "dotenv"],
     status: "AI PROJECT",
-    link: "https://github.com/sidhantmod-1025",
+    link: "https://aistuddy-buddy-ngsfmmnbhaate5rumf5kzj.streamlit.app/",
   },
   {
     number: "02",
@@ -24,18 +24,58 @@ const projects = [
       "A government-service portal concept designed to organize services such as income, residence, caste, birth and death certificates.",
     technologies: ["React", "JavaScript", "CSS", "Vite"],
     status: "WEB PROJECT",
-    link: "https://github.com/sidhantmod-1025",
+    link: "https://sidhantmod-1025.github.io/SevaKendra-Management-System/",
   },
   {
     number: "03",
     category: "FRONTEND DEVELOPMENT",
     title: "Student Portal",
     description:
-      "A student portal project featuring a registration form, dashboard flow, and email notifications using EmailJS.",
-    technologies: ["React", "JavaScript", "EmailJS", "CSS"],
+      "A modern and responsive personal portfolio built with React, Vite, and CSS to showcase my skills, projects, education, and journey as a Full Stack Developer",
+    technologies: ["React", "JavaScript", "CSS"],
     status: "WEB PROJECT",
-    link: "https://github.com/sidhantmod-1025",
+    link: "https://sidhantmod-1025.github.io/Student-portal-/",
   },
+   {
+    number: "04",
+    category: "FRONTEND DEVELOPMENT",
+    title: "GYM Clone for Gym Lovers",
+    description:
+      "A student portal project featuring a registration form, dashboard flow, and email notifications using EmailJS.",
+    technologies: ["React", "JavaScript", "CSS"],
+    status: "WEB PROJECT",
+    link: "https://sidhantmod-1025.github.io/gym_page/",
+  },
+  {
+    number: "05",
+    category: "FRONTEND DEVELOPMENT",
+    title: "Birthday Special",
+    description:
+      "A Beautiful birethday special for our special person .",
+    technologies: ["React", "JavaScript", "CSS"],
+    status: "WEB PROJECT",
+    link: "https://sidhantmod-1025.github.io/Birthday.html/",
+  },
+
+  {
+    number: "06",
+    category: "FRONTEND DEVELOPMENT",
+    title: "Clone ",
+    description:
+      "A beautiful clone and lot off practice of javascript and other fronted developer tools .",
+    technologies: ["React", "JavaScript", "CSS"],
+    status: "WEB PROJECT",
+    link: "https://sidhantmod-1025.github.io/clone-for-first/",
+  },
+  {
+    number: "07",
+    category: "Programming Language C",
+    title: "C language",
+    description:
+      "All C programming question and practice",
+    link: "https://github.com/sidhantmod-1025/c-programming",
+  },
+
 ];
 
 function Projects() {
