@@ -142,7 +142,7 @@ return ( <section
 
         <div className="about-photo-wrap">
           <img
-            src="sidPic.png"
+            src={`${import.meta.env.BASE_URL}sidPic.png`}
             alt="Sidhant Kumar"
             className="profile-image"
           />
