@@ -30,7 +30,8 @@
   padding-top: 10px;
 }
 
-.about-label span {
+
+.about-label-text span {
   color: #38e8ff;
 }
 
@@ -326,4 +327,103 @@
   .about-education {
     transition: none;
   }
+}
+/* =========================================
+   PERSONAL PROFILE PHOTO
+========================================= */
+
+  .about-profile-photo {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 55px;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 3px solid #090c13;
+}
+
+.photo-caption {
+  position: relative;
+  z-index: 1;
+}
+
+.photo-caption span {
+  color: #38e8ff;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.photo-caption h3 {
+  color: #f5f7fa;
+  font-size: 27px;
+  margin: 12px 0;
+}
+
+.photo-caption p {
+  color: #9ca5b8;
+  font-size: 14px;
+}
+
+.photo-glow {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  right: -60px;
+  bottom: -100px;
+  background: #8b5cf6;
+  filter: blur(100px);
+  opacity: 0.2;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 520px) {
+ .about-profile-photo {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  margin-top: 55px;
+  overflow: hidden;
+  border-radius: 18px;
+  margin-right:230px;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+  display: block;
+}
+
+.photo-caption {
+  position: absolute;
+  bottom: 25px;
+  left: 30px;
+  z-index: 2;
+}
+
+.photo-caption span,
+.photo-caption h3,
+.photo-caption p {
+  color: white;
+}
+
+.about-profile-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8),
+    transparent
+  );
+}
 }
