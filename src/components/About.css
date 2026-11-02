@@ -332,12 +332,13 @@
    PERSONAL PROFILE PHOTO
 ========================================= */
 
-  .about-profile-photo {
+  .about-profile {
   display: flex;
   align-items: center;
-  gap: 30px;
-  margin-top: 55px;
+  gap: 25px;
+  margin-top: 30px;
 }
+
 
 .profile-image {
   width: 100%;
